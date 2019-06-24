@@ -32,7 +32,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: $light-color;
-    padding-bottom: 170px;
+    padding-bottom: 163px;
+}
+
+.page {
+    padding-top: 161px;
 }
 
 .header {
@@ -83,6 +87,12 @@ body {
         letter-spacing: 0.7px;
         margin-bottom: 38px;
     }
+
+    &__name-top {
+        margin-top: 16px;
+        margin-left: 0;
+    }
+
     &__title {
         font-size: 48px;
         font-weight: 700;
@@ -102,7 +112,7 @@ body {
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 24px;
-        letter-spacing: 0.7px;
+        letter-spacing: 0.75px;
     }
     &__btn {
         display: block;
@@ -137,5 +147,24 @@ body {
         background-image: url(../img/book.png);
         background-repeat: no-repeat;
         flex-basis: 500px;
+    }
+}
+
+.block-author {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-ava {
+    position: relative;
+    &__svg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+
+    &__img {
+        margin-top: 47px;
+        margin-right: 44px;
     }
 }
