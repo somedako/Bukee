@@ -10,16 +10,23 @@
 
 $light-color: #fff;
 $accent-color: #65e496;
-
-
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
 
 h1, h2, h3, h4, p  {
     padding: 0;
     margin: 0;
 }
 
+h3 {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+}
+
 body {
     font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    line-height: 24px;
 }
 
 .wrap {
@@ -37,6 +44,23 @@ body {
 
 .page {
     padding-top: 161px;
+    padding-bottom: 160px;
+    &_gray {
+        background-color: $bg-light-color;
+    }
+    &__title {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+    }
+
+    &__subtitles {
+        color: $accent-color;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 0.9px;
+    }
 }
 
 .header {
@@ -88,7 +112,7 @@ body {
         margin-bottom: 38px;
     }
 
-    &__name-top {
+    &__name_top {
         margin-top: 16px;
         margin-left: 0;
     }
@@ -183,7 +207,79 @@ body {
             font-weight: 100;
             font-size: 80px;
             color: $accent-color;
-            margin-bottom: 12px;
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.block-about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 82px;
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: 'Open Sans', serif;
+    }
+
+    &-text {
+        flex-basis: 41%;
+        p {
+            letter-spacing: 0.6px;
+        }
+        &__links {
+            margin-top: 10px;
+            &>li {
+                display: inline-block;
+                list-style-type: none;
+            }
+            &>li>a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-table {
+        flex-basis: 49%;
+        &__list {
+            padding: 0;
+            margin: 25px 0 0 0;
+            counter-reset: list;
+            column-count: 2;
+            &>li {
+                position: relative;
+                padding-left: 37px;
+                counter-increment: list;
+                list-style-type: none;
+                margin-bottom: 8px;
+                letter-spacing: 0.7px;
+
+                &::before {
+                    content: counter(list) ". ";
+                }
+
+                &::after {
+                    content: "+";
+                    font-family: 'Open Sans', serif;
+                    font-size: 15px;
+                    line-height: 22px;
+                    position: absolute;
+                    left: 0;
+                    top: 1px;
+                    background-color: $accent-color;
+                    color: $light-color;
+                    padding: 0px 7px;
+                }
+            }
+        }
+        button {
+            background-color: $accent-color;
+            color: $light-color;
+            border: 1px solid transparent;
+            padding: 10px 30px;
+            margin-top: 20px;
         }
     }
 }
