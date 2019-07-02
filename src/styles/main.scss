@@ -61,6 +61,31 @@ body {
         font-size: 18px;
         letter-spacing: 0.9px;
     }
+
+    &__btn {
+        background: linear-gradient(to top left, #65e49c, #65e4af);
+        border: none;
+        color: $light-color;
+        text-decoration: none;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 18px;
+        margin-top: 28px;
+        padding: 11px 45px 15px 45px;
+        letter-spacing: 0.7px;
+        position: relative;
+        &::before {
+            content: " ";
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            border-radius: 3px;
+        }
+    }
 }
 
 .header {
@@ -142,7 +167,7 @@ body {
     }
     &__btn {
         display: block;
-        background-color: $accent-color;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
         color: $light-color;
         text-decoration: none;
         max-width: 250px;
@@ -152,6 +177,18 @@ body {
         padding: 14px 0;
         letter-spacing: 0.7px;
         margin-bottom: 19px;
+        position: relative;
+        &::before {
+            content: " ";
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            border-radius: 3px;
+        }
     }
 
     small {
@@ -171,7 +208,7 @@ body {
         position: relative;
         width: 445px;
         height: 639px;
-        background-image: url(../img/book.png);
+        background-image: url(../img/book.svg);
         background-repeat: no-repeat;
         flex-basis: 500px;
         &__title {
@@ -292,7 +329,7 @@ body {
         }
 
         &__btn {
-            background-color: $accent-color;
+            background: linear-gradient(to top left, #65e49c, #65e4af);
             border: none;
             color: $light-color;
             text-decoration: none;
@@ -303,6 +340,19 @@ body {
             padding: 14px 45px;
             letter-spacing: 0.7px;
             margin-bottom: 19px;
+            position: relative;
+                &::before {
+                content: " ";
+                display: block;
+                height: 20px;
+                width: 100%;
+                background-color: #b2f1be;
+                position: absolute;
+                z-index: -1;
+                bottom: -2px;
+                right: 0;
+                border-radius: 3px;
+            }
         }
     }
 
@@ -329,5 +379,85 @@ body {
                 }
             }
        }
+    }
+}
+
+.block-product {
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 85px;
+
+    &-item {
+        text-align: center;
+    }
+    &-demo {
+        display: block;
+        margin: 0 auto 35px;
+        position: relative;
+        width: 269px;
+        height: 409px;
+        background-image: url(../img/book-small.svg);
+        background-repeat: no-repeat;
+        -ms-flex-preferred-size: 500px;
+            flex-basis: 500px;
+        &__title {
+            font-size: 24px;
+            color: $light-color;
+            text-transform: uppercase;
+            letter-spacing: 0.9px;
+            position: absolute;
+            left: 71px;
+            top: 71px;
+            span {
+                font-family: 'Open Sans', serif;
+                font-size: 12px;
+                color: $accent-color;
+                display: block;
+                text-transform: initial;
+                margin-top: 7px;
+                letter-spacing: 0.6px;
+            }
+        }
+        &__author {
+            font-family: 'Open Sans', serif;
+            font-size: 12px;
+            color: $accent-color;
+            letter-spacing: 0.6px;
+            position: absolute;
+            bottom: 27px;
+            left: 82px;
+        }
+    }
+    &-text {
+        h3 {
+            margin-bottom: 17px;
+        }
+        p {
+            font-size: 15px;
+            max-width: 316px;
+            letter-spacing: 0.7px;
+            margin-bottom: 17px;
+        }
+        a {
+            font-size: 15px;
+            color: $accent-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid transparent;
+            padding-bottom: 5px;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            &:hover {
+                border-bottom: 3px solid $accent-color;
+            }
+        }
+    }
+    & + .page__btn {
+        display: block;
+        margin: 84px auto 0;
+        padding: 13px 0;
+        max-width: 227px;
     }
 }
