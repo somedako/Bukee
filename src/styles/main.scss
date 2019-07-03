@@ -73,18 +73,7 @@ body {
         margin-top: 28px;
         padding: 11px 45px 15px 45px;
         letter-spacing: 0.7px;
-        position: relative;
-        &::before {
-            content: " ";
-            display: block;
-            height: 20px;
-            width: 100%;
-            background-color: #b2f1be;
-            position: absolute;
-            z-index: -1;
-            bottom: -2px;
-            border-radius: 3px;
-        }
+        box-shadow: 0 -2px #adedbb inset;
     }
 }
 
@@ -130,6 +119,10 @@ body {
 
 .block-text {
     flex-basis: calc(93% - 500px);
+
+    &--left {
+        flex-basis: calc(93% - 520px);
+    }
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
@@ -153,7 +146,7 @@ body {
             display: block;
             color: $accent-color;
             font-size: 18px;
-            margin-top: 9px;
+            margin-top: 27px;
             letter-spacing: 0.9px;
         }
     }
@@ -174,21 +167,14 @@ body {
         border-radius: 3px;
         text-align: center;
         margin-top: 48px;
-        padding: 14px 0;
+        padding: 11px 0 15px 0;
         letter-spacing: 0.7px;
         margin-bottom: 19px;
-        position: relative;
-        &::before {
-            content: " ";
-            display: block;
-            height: 20px;
-            width: 100%;
-            background-color: #b2f1be;
-            position: absolute;
-            z-index: -1;
-            bottom: -2px;
-            border-radius: 3px;
-        }
+        box-shadow: 0 -2px #adedbb inset;
+    }
+
+    &__btn--main {
+        box-shadow: 0 -2px #59ba88 inset;
     }
 
     small {
@@ -196,6 +182,40 @@ body {
         font-style: italic;
         font-size: 12px;
         letter-spacing: 0.2px;
+    }
+
+    &-item {
+        margin-bottom: 55px;
+        &__date {
+            font-size: 15px;
+            font-family: 'Open Sans', serif;
+            letter-spacing: 0.8px;
+            margin-bottom: 4px;
+        }
+        &__title {
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            margin-bottom: 16px;
+
+        }
+        &__desc {
+            font-size: 15px;
+            font-family: 'Open Sans', serif;
+            letter-spacing: 0.75px;
+        }
+        &__btn {
+            display: block;
+            background: linear-gradient(to top left, #65e49c, #65e4af);
+            color: $light-color;
+            text-decoration: none;
+            max-width: 137px;
+            border-radius: 3px;
+            text-align: center;
+            margin-top: 24px;
+            padding: 11px 0 15px 0;
+            letter-spacing: 0.7px;
+            box-shadow: 0 -2px #adedbb inset;
+        }
     }
 
 }
@@ -253,9 +273,20 @@ body {
         right: 0;
     }
 
+    &__svg--left {
+        right: inherit;
+        left: 0;
+    }
+
     &__img {
         margin-top: 47px;
         margin-right: 44px;
+    }
+
+    &__img--left {
+        margin-top: 49px;
+        margin-left: 51px;
+        margin-right: 0;
     }
 }
 
@@ -337,22 +368,10 @@ body {
             text-align: center;
             font-size: 18px;
             margin-top: 28px;
-            padding: 14px 45px;
+            padding: 11px 45px 15px 45px;
             letter-spacing: 0.7px;
             margin-bottom: 19px;
-            position: relative;
-                &::before {
-                content: " ";
-                display: block;
-                height: 20px;
-                width: 100%;
-                background-color: #b2f1be;
-                position: absolute;
-                z-index: -1;
-                bottom: -2px;
-                right: 0;
-                border-radius: 3px;
-            }
+            box-shadow: 0 -2px #adedbb inset;
         }
     }
 
@@ -461,3 +480,4 @@ body {
         max-width: 227px;
     }
 }
+
