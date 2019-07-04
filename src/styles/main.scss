@@ -481,3 +481,46 @@ body {
     }
 }
 
+.block-blog {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+        font-size: 18px;
+    }
+    &-img {
+        width: 369px;
+        height: 224px;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 369px;
+            height: 224px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    }
+
+    &-info {
+        font-size: 15px;
+        a {
+            color: $accent-color;
+            text-decoration: none;
+        }
+    }
+
+    &__desc {
+        font-size: 15px;
+        font-family: 'Open Sans', serif;
+    }
+
+    & + .page__btn {
+        display: block;
+        margin: 84px auto 0;
+        padding: 13px 0;
+        max-width: 227px;
+    }
+}
+
