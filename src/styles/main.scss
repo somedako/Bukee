@@ -597,24 +597,37 @@ body {
 .footer {
     background-color: $bg-dark-color;
     color: $gray-color;
-    padding: 80px 0;
+    padding: 140px 0;
 }
 
 .block-footer {
     display: flex;
+    justify-content: space-between;
     &>div {
-        flex-basis: 30%;
-        justify-content: space-between;
+        flex-basis: 30%; 
     }
+    &-first {
+        margin-left: 80px;
+    }
+
     &__logo {
         display: block;
         width: 137px;
         height: 28px;
-        background-image: url(../img/logo.svg);
+        background-image: url(../img/f-logo.png);
+        margin-bottom: 25px;
     }
+
+    &__copyright {
+        margin-top: 20px;
+    }
+
     &__title {
         font-size: 18px;
         color: $accent-color;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        letter-spacing: 1.3px;
     }
     &__list {
         list-style-type: none;
@@ -625,10 +638,12 @@ body {
         display: flex;
         list-style-type: none;
         padding-left: 0;
+        margin-top: 40px;
         &>li {
             margin-right: 10px;
             &>a {
                 color: $accent-color;
+                
             }
         }
     }
