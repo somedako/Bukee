@@ -132,6 +132,7 @@ h3 {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+        padding: 38px 15px 100px 15px;  
     }
     &__logo {
         display: block;
@@ -148,6 +149,14 @@ h3 {
             -ms-flex-pack: end;
                 justify-content: flex-end;
         font-family: 'Open Sans', serif;
+        flex-wrap: wrap;
+        @media (max-width: 920px) {
+            padding-left: 0;
+        }
+        @media (max-width: 750px) {
+            justify-content: center;
+            padding-right: 0;
+        }
         &__item {
             margin-left: 22px;
             padding-bottom: 5px;
@@ -305,8 +314,8 @@ h3 {
     @media(max-width:1020px) {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
+            -ms-flex-direction: column;
+                flex-direction: column;
         text-align: center;
     }
     &-demo {
@@ -318,11 +327,17 @@ h3 {
         background-repeat: no-repeat;
         -ms-flex-preferred-size: 500px;
             flex-basis: 500px;
-        @media(max-width:1020px) {
-            -ms-flex-preferred-size: 100%;
-                flex-basis: 100%;
+        @media(max-width:1020px)
+         {
+            width: 354px;
+            height: 543px;
             margin: 56px auto 0;
         }
+
+        @media(max-width: 480px) {
+			width: 280px;
+			height: 460px;
+		}
         &__title {
             font-size: 36px;
             text-transform: uppercase;
@@ -330,6 +345,15 @@ h3 {
             position: absolute;
             left: 131px;
             top: 118px;
+            @media(max-width:1020px){
+                font-size: 28px;
+                padding-right: 10px;
+            }
+
+            @media(max-width: 480px) {
+                font-size: 28px;
+                left: 60px;
+            }
             span {
                 font-family: 'Open Sans', serif;
                 font-size: 14px;
@@ -348,6 +372,10 @@ h3 {
             position: absolute;
             bottom: 52px;
             left: 87px;
+            @media(max-width: 480px) {
+                bottom: 111px;
+                left: 67px;
+            }
         }
     }
 }
